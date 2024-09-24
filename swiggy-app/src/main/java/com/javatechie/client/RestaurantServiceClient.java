@@ -13,6 +13,6 @@ public class RestaurantServiceClient {
     private RestTemplate template;
 
     public OrderResponseDTO fetchOrderStatus(String orderId) {
-        return template.getForObject("http://RESTAURANT-SERVICE/restaurant/orders/status/" + orderId, OrderResponseDTO.class);
+        return template.getForObject( "http://RESTAURANT-SERVICE/restaurant/orders/status/" + orderId, OrderResponseDTO.class);
     }
 }

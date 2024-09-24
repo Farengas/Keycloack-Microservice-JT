@@ -1,27 +1,30 @@
 package com.javatechie.controller;
 
-import com.javatechie.dto.OrderResponseDTO;
-import com.javatechie.service.RestaurantService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.javatechie.model.Order;
+import com.javatechie.service.OrderService;
+
+import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/restaurant")
+@AllArgsConstructor
 public class RestaurantController {
 
-    @Autowired
-    private RestaurantService service;
 
-    @GetMapping
-    public String greetingMessage() {
-        return service.greeting();
+    private final OrderService orderService;
+
+    @GetMapping("/order")
+    public List<Order> findAllOrders(){
+        return  orderService.findAllOrders();
     }
 
-    @GetMapping("/orders/status/{orderId}")
-    public OrderResponseDTO getOrder(@PathVariable String orderId) {
-        return service.getOrder(orderId);
+    @PostMapping("/new")
+    public Order createOrder (@RequestBody Order order){
+        return orderService.createOrder(order);
     }
+
 }
