@@ -1,6 +1,7 @@
 package com.javatechie.controller;
 
 import com.javatechie.model.Order;
+import com.javatechie.repository.OrderRepository;
 import com.javatechie.service.OrderService;
 
 import lombok.AllArgsConstructor;
@@ -16,6 +17,7 @@ public class RestaurantController {
 
 
     private final OrderService orderService;
+    private final OrderRepository orderRepository;
 
     @GetMapping("/order")
     public List<Order> findAllOrders(){
