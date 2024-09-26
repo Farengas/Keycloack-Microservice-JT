@@ -1,10 +1,11 @@
 package com.javatechie.service;
 
-import com.javatechie.client.RestaurantServiceClient;
+
+
 import com.javatechie.dto.OrderResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+/*
 @Service
 public class SwiggyAppService {
 
@@ -19,3 +20,5 @@ public class SwiggyAppService {
         return restaurantServiceClient.fetchOrderStatus(orderId);
     }
 }
+
+ */

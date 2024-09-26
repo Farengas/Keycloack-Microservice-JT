@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-
+/*
 @Component
 public class RestaurantServiceClient {
     @Autowired
@@ -18,3 +18,6 @@ public class RestaurantServiceClient {
         return template.getForObject( "http://RESTAURANT-SERVICE/restaurant/" + orderId, OrderResponseDTO.class);
     }
 }
+
+
+ */

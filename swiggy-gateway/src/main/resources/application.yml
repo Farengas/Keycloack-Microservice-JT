@@ -7,6 +7,11 @@ spring:
          predicates:
            - Path=/swiggy/**
 
+       - id: restaurant-service-feign
+         uri: lb://SWIGGY-APP
+         predicates:
+           - Path=/feign/**
+
 
 
        - id: restaurant-service

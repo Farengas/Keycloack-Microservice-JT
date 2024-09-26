@@ -17,7 +17,7 @@ public class RestaurantController {
 
 
     private final OrderService orderService;
-    private final OrderRepository orderRepository;
+
 
     @GetMapping("/order")
     public List<Order> findAllOrders(){

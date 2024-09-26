@@ -1,5 +1,7 @@
 com\javatechie\RestaurantServiceApplication.class
 com\javatechie\controller\RestaurantController.class
-com\javatechie\service\RestaurantService.class
+com\javatechie\model\Order.class
+com\javatechie\repository\OrderRepository.class
 com\javatechie\dto\OrderResponseDTO.class
-com\javatechie\dao\RestaurantOrderDAO.class
+com\javatechie\service\OrderService.class
+com\javatechie\service\impl\OrderServiceImpl.class
